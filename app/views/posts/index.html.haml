@@ -1,0 +1,11 @@
+<h1>Welcome TO Broken Records</h1>
+
+<% @posts.each do |post|  %>
+
+  <h3> <%=post.title %> </h3>
+  <h3> <%= post.content %> </h3>
+  
+  <hr />
+<% end %>
+
+

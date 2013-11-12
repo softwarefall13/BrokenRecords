@@ -1,0 +1,10 @@
+require 'spec_helper'
+
+describe StudentsController do
+  describe 'showing entries on index page' do
+    it 'should render entries on index page' do
+    get :index
+    expect{response}.to render_template('index')
+  end
+ end
+end

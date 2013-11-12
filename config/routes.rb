@@ -1,6 +1,6 @@
 Rate::Application.routes.draw do
 
-resources :posts
+resources :posts, :reviews 
 # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -36,3 +36,7 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+#
+gem 'haml'
+gem 'rspec-rails' , '~> 2.10'
+
