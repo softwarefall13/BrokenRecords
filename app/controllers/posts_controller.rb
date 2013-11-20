@@ -4,26 +4,42 @@ class PostsController < ApplicationController
   end
 
   def show
-
+    @post = Post.find(params[:id])
   end
 
   def new
-
+    @post = Post.new
   end
 
   def create
+    @post = Post.new(params[:post])
+
+    if @post.save
+      redirect_to posts_path, :notice => "Your post was successfully added"
+    else
+      render "new"
+    end
 
   end
 
   def edit
-
+    @post = Post.find(params[:id])
   end
 
   def update
+    @post = Post.find(params[:id])
+
+    if @post.update_attributes(params[:post])
+      redirect_to posts_path :notice => "Your posts was successfully Updated!"
+    else
+      render "edit"
+    end
 
   end
 
   def destroy
-
+    @post = Post.find(params[:id])
+    @post.destroy
+    redirect_to posts_path, :notice => "Your post has been deleled"
   end
 end

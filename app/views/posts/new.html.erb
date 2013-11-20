@@ -1,1 +1,25 @@
+<h1> Add a New Review </h1>
+
+<%= form_for @post do |f| %>
+  <p>
+    <%= f.label :title %><br/>
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :content %><br/>
+    <%= f.text_area :content %>
+  </p>
+  <p>
+    <%= f.submit "Add Review" %>
+  </p>
+<% end %>
+
+#<form action="/users/create" method="post">
+#<p><label>Login: </br>
+#<input id="user_login" name ="user[login]" size ="30" type="text" /></label></p>
+#<p><label> Password: </br>
+#<input id="user_password_confirmation" name="user[password_confirmation]" size="30" type="password"/> </label></p>
+#<p><input name ="commit" type="submit" value="Join"
+#</form>
+
 

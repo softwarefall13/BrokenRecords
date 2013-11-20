@@ -1,11 +1,15 @@
-<h1>Welcome TO Broken Records</h1>
+<h1>Welcome To Broken Records</h1>
 
 <% @posts.each do |post|  %>
 
-  <h3> <%=post.title %> </h3>
-  <h3> <%= post.content %> </h3>
-  
+  <h3> <%=link_to post.title, post%> </h3>
+  <p> <%= post.content %> </p>
+  <p>
+      <%= link_to "Edit", edit_post_path(post) %> </p>
+      <%= link_to "Delete", post, :confirm => "Are you want to delete the following post?", :method => :delete %>
+  </p>
+
   <hr />
 <% end %>
 
-
+<p><%= link_to "Add a New Review", new_post_path %></p> 

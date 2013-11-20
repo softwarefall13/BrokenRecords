@@ -1,7 +1,7 @@
 class CreatePosts < ActiveRecord::Migration
   def change
     create_table :posts do |t|
-    add_column :posts, :ss1_enabled, :boolean, :default true
+#add_column :posts, :title
       t.string :title
       t.text :content
       
