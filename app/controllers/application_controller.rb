@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
       redirect_to login_path
     else
       @member = Member.find(session[:member_id])
-      $member_first_name = @member.first_name
+      $members_first_name = @member.first_name
     end
   end
 
