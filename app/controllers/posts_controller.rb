@@ -15,7 +15,7 @@ class PostsController < ApplicationController
     @post = Post.new(params[:post])
 
     if @post.save
-      redirect_to posts_path, :notice => "Your post was successfully added"
+      redirect_to $posts_path, :notice => "Your post was successfully added"
     else
       render "new"
     end

@@ -1,4 +1,5 @@
 Rate::Application.routes.draw do
+resources :posts
 
 
 resources :members
