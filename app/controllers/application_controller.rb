@@ -2,7 +2,6 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
 
   private
-
   def check_login
     if !session[:member_id]
       flash[:status] = FALSE
@@ -11,10 +10,7 @@ class ApplicationController < ActionController::Base
       redirect_to login_path
     else
       @member = Member.find(session[:member_id])
-      $members_first_name = @member.first_name
+      $member_first_name = @member.first_name
     end
   end
-
-
-
 end
