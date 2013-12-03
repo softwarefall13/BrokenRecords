@@ -5,7 +5,7 @@
   <h3> <%=link_to post.title, post%> </h3>
   <p> <%= post.content %> </p>
   <p>
-      <%= link_to "Edit", edit_post_path(post) %> </p>
+      <%= link_to "Editing", edit_post_path(post) %> </p>
       <%= link_to "Delete", post, :confirm => "Are you want to delete the following post?", :method => :delete %>
   </p>
 
